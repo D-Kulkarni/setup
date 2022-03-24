@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
-import { NotificationService } from '../../core/notification-service.service';
-import { environment } from '../../../environments/environment';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { LocationService } from '../../core/location.service';
+import { NotificationService } from '../../core/notification-service.service';
 
 @Component({
   selector: 'app-login',
@@ -12,10 +12,67 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   public invalidLogin: boolean = false;
-
-  constructor(private http:HttpClient,private router:Router,private notification: NotificationService) { }
+  allCountriesList!:any[] ;
+  statesByCountryList!:any[] ;
+  countryCode!:string;
+  stateCode!:string;
+  cityList!:any[];
+  constructor(private http:HttpClient,private router:Router,private notification: NotificationService,private  locationService:LocationService) { }
 
   ngOnInit(): void {
+    this.allCountriesList = this.locationService.getAllCountries();
+   let data =  this.allCountriesList
+      data.forEach((item:any,index)=>{
+        // if(item.name == 'India'){
+        //   console.log('index',index);
+        //   data.splice(100,1)
+        //   data.splice(0,0,item);
+          
+         
+        // }
+        if(item.name == 'United States'){
+          console.log('index',index);
+          data.splice(229,1)
+          data.splice(0,0,item);
+          
+         
+        }
+        if(item.name == 'India'){
+          console.log('index',index);
+          data.splice(100,1)
+          data.splice(0,0,item);
+          
+         
+        }
+      })
+  this.allCountriesList = data;
+  console.log(this.allCountriesList);
+  
+    
+  }
+  selectedCountry(data:any) {
+  console.log('countrycode',data);
+  
+    this.countryCode = data.target.value;
+    this.getStateByCountry();
+
+  }
+
+  selectedState(data:any) {
+    console.log('data',data);
+    
+    this.stateCode = data.target.value;
+    this.getCityByCountryAndState()
+
+  }
+
+  getStateByCountry() {
+    this.statesByCountryList = this.locationService.getStateByCountry(this.countryCode);
+    
+  }
+  getCityByCountryAndState() {
+    this.cityList = this.locationService.getCitiesByState(this.countryCode, this.stateCode);
+    
   }
 
 

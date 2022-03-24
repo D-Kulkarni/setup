@@ -14,3 +14,25 @@
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
     </div>
 </form>
+<br>
+<select style="width: 50%;" name="countryDropdown" title="country" class="form-control"
+    (change)="selectedCountry($event)" id="exampleFormControlSelect2">
+    <option value="">Select Country</option>
+    <option *ngFor="let countries of allCountriesList" [value]="countries.isoCode">
+        {{countries.name}}</option>
+
+</select>
+<br>
+<select style="width: 50%;" (change)="selectedState($event)" name="stateDropdown" title="state" single
+    class="form-control" id="exampleFormControlSelect2">
+    <option value="">Select State</option>
+    <option *ngFor="let states of statesByCountryList" [value]="states.isoCode">{{states.name}}</option>
+
+</select>
+<br>
+<select style="width: 50%;" name="stateDropdown" title="state" single class="form-control"
+    id="exampleFormControlSelect2">
+    <option value="">Select City</option>
+    <option *ngFor="let cities of cityList" [value]="cities.name">{{cities.name}}</option>
+
+</select>
