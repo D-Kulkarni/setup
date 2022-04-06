@@ -7,3 +7,6 @@
 
 //SideNav Responsive 
 //https://stackblitz.com/edit/angular-close-side-nav-on-button-click?file=app%2Fsidenav-responsive-example.ts
+
+//media queries
+//https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/
