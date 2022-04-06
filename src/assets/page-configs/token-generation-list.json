@@ -1,0 +1,86 @@
+{
+  "tokenDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "",
+        "header": "TokenNumber",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate1",
+          "index": "0"
+        }
+      },
+      {
+        "field": "",
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate3",
+          "index": "2"
+        }
+      },
+      {
+        "field": "",
+        "header": "MobileNumber",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate5",
+          "index": "4"
+        }
+      },
+
+      {
+        "field": "visitor.email",
+        "header": "Email",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+
+      {
+        "field": "",
+        "header": "VisitingPurpose",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate2",
+          "index": "1"
+        }
+      },
+      {
+        "field": "",
+        "header": "AttendedStatus",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate4",
+          "index": "3"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  }
+}

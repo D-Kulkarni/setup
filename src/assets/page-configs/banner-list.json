@@ -1,0 +1,66 @@
+{
+  "bannerList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "",
+        "header": "Banners",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamicTemplate0",
+          "index": "0"
+        }
+      },
+      {
+        "field": "",
+        "header": "title",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate1",
+          "index": "1"
+        }
+      },
+      {
+        "field": "",
+        "header": "Active",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate2",
+          "index": "2"
+        }
+      },
+      {
+        "field": "",
+        "header": "Action",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate3",
+          "index": "3"
+        }
+      }
+    ],
+    "lazyLoad": true,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  }
+}

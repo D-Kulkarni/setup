@@ -1,0 +1,60 @@
+{
+  "tableConfig": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "",
+        "header": "Surname",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate0",
+          "index": "0"
+        }
+      },
+      {
+        "field": "",
+        "header": "Total",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate1",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 25,
+    "rowExpand": false,
+    "rowSelection": true,
+    "selectionMode": "single",
+    "responsive": true,
+    "pageLinks": 2,
+    "pagesSizes": [
+      {
+        "label": "10",
+        "value": 10
+      },
+      {
+        "label": "25",
+        "value": 25
+      },
+      {
+        "label": "50",
+        "value": 50
+      },
+      {
+        "label": "100",
+        "value": 100
+      },
+      {
+        "label": "500",
+        "value": 500
+      }
+    ]
+  }
+}

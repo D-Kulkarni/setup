@@ -1,0 +1,376 @@
+<p-toast [style]="{ marginTop: '80px' }"></p-toast>
+<div class="ui-fuild">
+  <p-overlayPanel #filter class="filter-overlay">
+    <div class="Filter-panel">
+      <span>{{ "CommonFields.Filter" | translate }}</span>
+      <form (ngSubmit)="handelSubmit()">
+        <div class="filter-box">
+          <div class="p-grid">
+            <div class="p-col-12 p-md-6">
+              <label for="input">{{ "Officer.Department" | translate }}</label
+              ><br />
+              <p-dropdown
+                class="description"
+                id="department"
+                name="department"
+                [options]="departmentData"
+                [filter]="true"
+                [(ngModel)]="department"
+                placeholder="{{ 'CommonFields.SlctDepartment' | translate }}"
+                optionLabel="name"
+                [showClear]="true"
+              >
+              </p-dropdown>
+            </div>
+          </div>
+          <div class="p-grid">
+            <div class="p-col-12">
+              <label for="select gender">{{
+                "CommonFields.Gender" | translate
+              }}</label>
+              <div class="genderBtnGroup">
+                <p-selectButton
+                  [options]="genderTypes"
+                  name="gender"
+                  [(ngModel)]="filterObj.gender"
+                  class="genderGroup"
+                >
+                  <ng-template let-item>
+                    <span class="img-circle">
+                      <img src="assets/icons/{{ item.icon }}.png" />
+                    </span>
+                    <span class="ui-button-text ui-clickable">{{
+                      item.label
+                    }}</span>
+                  </ng-template>
+                </p-selectButton>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-grid filter-btn">
+          <button
+            pButton
+            type="submit"
+            label="{{ 'Buttons.Apply' | translate }}"
+            class="ui-button-warning mr-5"
+          ></button>
+          <button
+            pButton
+            type="button"
+            label="{{ 'Buttons.Cancel' | translate }}"
+            (click)="filter.hide()"
+            class="ui-button-secondary mr-5"
+          ></button>
+          <button
+            pButton
+            type="button"
+            label="{{ 'Buttons.Reset' | translate }}"
+            (click)="clearFilter()"
+            class="ui-button-secondary mr-5"
+          ></button>
+        </div>
+      </form>
+    </div>
+  </p-overlayPanel>
+  <div class="ui-fuild">
+    <div class="p-grid">
+      <div class="p-col-12">
+        <div class="topbar-title mt-2">
+          <h3>{{ "Officer.Officer" | translate }} ({{ totalCount }})</h3>
+          <div class="office-logo">
+            <button
+              appActionPermission
+              pButton
+              type="button"
+              label="{{ 'Buttons.Add' | translate }}"
+              class="m-hide ui-button-raised ui-button-warning"
+              routerLink="/adhikari/create"
+            ></button>
+            <app-display-office-name></app-display-office-name>
+          </div>
+        </div>
+        <div
+          class="card no-margin voter-search-card desktop-view Cardtableouterwp"
+        >
+          <div class="expandable-tbl">
+            <div class="p-col-12">
+              <div class="inline-block">
+                <span class="filter-count">
+                  <label *ngIf="filterFlag">{{
+                    "CommonFields.FilterCount" | translate
+                  }}</label>
+                  <span class="filter-count-margin">
+                    <p
+                      *ngIf="filterFlag"
+                      pTooltip="{{ 'CommonFields.TFilterCount' | translate }}"
+                    >
+                      ({{ paginationCount }})
+                    </p>
+                  </span>
+                </span>
+                <span
+                  class="ui-helper-clearfix"
+                  style="text-align: left;"
+                ></span>
+                <div class="d-flex">
+                  <span class="search-box">
+                    <input
+                      type="text"
+                      pInputText
+                      placeholder="{{ 'CommonFields.SrNaPh' | translate }}"
+                      class="search-input"
+                      [(ngModel)]="filterObj.search"
+                    />
+                    <i class="pi pi-search" (click)="handelSubmit()"></i>
+                  </span>
+                  <span *ngIf="filterFlag">
+                    <button
+                      pButton
+                      type="button"
+                      label="{{ 'Buttons.ClearFilter' | translate }}"
+                      class="ui-button-secondary three-dots mr-5 btn"
+                      (click)="setFilterObject()"
+                    ></button>
+                  </span>
+                  <span>
+                    <button
+                      pButton
+                      type="button"
+                      icon="pi pi-filter"
+                      class="ui-button-secondary mr-5"
+                      [ngClass]="{
+                        'filter-icon': !filterFlag,
+                        'filter-icon1': filterFlag
+                      }"
+                      (click)="Filter($event, filter)"
+                    ></button>
+                    <button
+                      pButton
+                      type="button"
+                      icon="pi pi-ellipsis-v"
+                      class="ui-button-secondary three-dots"
+                    ></button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <pin-table
+            *ngIf="config"
+            [data]="adhikariData"
+            class="shedule-book-list responsive-tabel"
+            [config]="config.adhikariDataList"
+            [totalRecords]="paginationCount"
+            (onEvent)="handleEvent($event)"
+          >
+            <!--Sample action Template -->
+            <ng-template
+              #dynamiTemplate1
+              let-value
+              let-col="col"
+              let-columns="columns"
+              let-rowData="rowData"
+              let-rowIndex="rowIndex"
+            >
+              <div class="kiosk-img">
+                <app-dumb-profile-photo-thumbnail
+                  gender="{{ rowData.gender }}"
+                  profileImage="{{ rowData?.ProfileImage }}"
+                ></app-dumb-profile-photo-thumbnail>
+                <span>
+                  &nbsp;
+                  {{ rowData?.firstName | emptyValue }}
+                  {{ rowData?.lastName | emptyValue }}
+                </span>
+              </div>
+            </ng-template>
+
+            <ng-template
+              #dynamiTemplate2
+              let-value
+              let-col="col"
+              let-columns="columns"
+              let-rowData="rowData"
+              let-rowIndex="rowIndex"
+            >
+              <span>
+                <span>
+                  <span> {{ rowData?.phone | emptyValue }} </span>
+                  <span *ngIf="rowData?.alternatePhone != null">
+                    / {{ rowData?.alternatePhone | emptyValue }}
+                  </span>
+                </span>
+              </span>
+            </ng-template>
+
+            <ng-template
+              #dynamiTemplate4
+              let-value
+              let-col="col"
+              let-columns="columns"
+              let-rowData="rowData"
+              let-rowIndex="rowIndex"
+            >
+              <span pTooltip="{{ rowData?.email }}">
+                {{ rowData?.email | emptyValue | contentElipsis: "20" }}
+              </span>
+            </ng-template>
+
+            <ng-template
+              #dynamiTemplate3
+              let-value
+              let-col="col"
+              let-columns="columns"
+              let-rowData="rowData"
+              let-rowIndex="rowIndex"
+            >
+              <span>
+                <span class="address-font" *ngIf="rowData?.cityType == null">
+                  {{ rowData?.assembly?.name | emptyValue }}
+                </span>
+                <span
+                  class="address-font"
+                  *ngIf="rowData?.cityType == 'VILLAGE'"
+                >
+                  {{ rowData?.gaon?.name | emptyValue }},
+                  {{ rowData?.gan_number?.name | emptyValue }},
+                  {{ rowData?.gat_number?.name | emptyValue }},
+                  {{ rowData?.assembly?.name | emptyValue }}
+                </span>
+                <span class="address-font" *ngIf="rowData?.cityType == 'CITY'">
+                  {{ rowData?.prabhagArea?.name | emptyValue }}, <br />
+                  {{ rowData?.prabhag?.name | emptyValue }},
+                  {{ rowData?.assembly?.name | emptyValue }}
+                </span>
+              </span>
+            </ng-template>
+
+            <ng-template
+              #rowActionTemplate
+              let-value
+              let-col="col"
+              let-columns="columns"
+              let-rowData="rowData"
+              let-rowIndex="rowIndex"
+            >
+              <div
+                *ngIf="rowData.recordStatus != 'DELETED' && userRoleFlag"
+                class="ComnListIcons"
+              >
+                <button
+                  appActionPermission
+                  pButton
+                  type="button"
+                  icon="pi pi-pencil"
+                  class="ui-button-secondary edit-btn mr-5"
+                  (click)="editAdhikari(rowData)"
+                  pTooltip="{{ 'CommonFields.Edit' | translate }}"
+                ></button>
+                <button
+                  appActionPermission
+                  pButton
+                  type="button"
+                  (click)="opendialoug(rowData)"
+                  icon="pi pi-trash"
+                  class="ui-button-secondary edit-btn mr-5"
+                  pTooltip="{{ 'CommonFields.Delete' | translate }}"
+                ></button>
+              </div>
+              <div *ngIf="rowData.recordStatus == 'DELETED'">
+                <span class="delete-text">
+                  <i
+                    class="pi pi-pw pi-info-circle"
+                    style="font-size: 2em;"
+                  ></i>
+                  <span class="del-padding">{{
+                    "CommonFields.Deleted" | translate
+                  }}</span>
+                </span>
+              </div>
+            </ng-template>
+
+            <!--Sample row expand Template -->
+            <ng-template #rowExpandTemplate let-rowData let-columns="columns">
+              <div class="ui-g ui-fluid tablelistviewmainwp">
+                <div class="ui-g-12 ui-md-12">
+                  <div class="p-grid">
+                    <div class="p-col-12 p-md-12 p-lg-12">
+                      <div class="ui-g">
+                        <div class="ui-g-12">
+                          <div
+                            class="card card-expand inline-scrollpanel tablelistviewwp"
+                          >
+                            <p-table [value]="rowData.complains.reverse()">
+                              <ng-template pTemplate="header">
+                                <tr class="tbl-header">
+                                  <th>{{ "Officer.TockenNo" | translate }}</th>
+                                  <th>{{ "Officer.Category" | translate }}</th>
+                                  <th>{{ "Officer.Subtype" | translate }}</th>
+                                  <th>
+                                    {{ "Officer.ComplainStatus" | translate }}
+                                  </th>
+                                  <th>
+                                    {{ "Officer.ComplainDate" | translate }}
+                                  </th>
+                                </tr>
+                              </ng-template>
+                              <ng-template
+                                pTemplate="body"
+                                let-row
+                                let-columns="columns"
+                              >
+                                <tr class="tbl-body-row">
+                                  <td>{{ row?.tokenNumber | emptyValue }}</td>
+                                  <td>
+                                    {{ row?.category?.name | emptyValue }}
+                                  </td>
+                                  <td>{{ row?.description | emptyValue }}</td>
+                                  <td>{{ row?.status | emptyValue }}</td>
+                                  <td>{{ row?.createdDate | mydate }}</td>
+                                </tr>
+                              </ng-template>
+                            </p-table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </pin-table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p-dialog
+    class="dialog-del DelPupMainwp"
+    [modal]="true"
+    header="Delete Confirmation"
+    [(visible)]="dialougFlag"
+    [style]="{ width: '25vw' }"
+    [baseZIndex]="10000"
+  >
+    <p class="delete-popup DelPupContentwp">
+      {{ "CommonFields.DeletePopupMsg" | translate }}
+    </p>
+    <p-footer class="DelPupfooterwp">
+      <button
+        type="button"
+        pButton
+        (click)="deleteRecord(deleteData)"
+        label="{{ 'Buttons.Yes' | translate }}"
+        class="ui-button-warning"
+      ></button>
+      <button
+        type="button"
+        pButton
+        (click)="dialougFlag = false"
+        label="{{ 'Buttons.No' | translate }}"
+        class="ui-button-secondary"
+      ></button>
+    </p-footer>
+  </p-dialog>
+</div>

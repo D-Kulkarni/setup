@@ -1,0 +1,496 @@
+{
+  "sheduleBookDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "tokenNumber",
+        "header": "TokenNumber",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": ["inviter.firstName", "inviter.lastName"],
+        "header": "Inviter",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": ["reference.firstName", "reference.lastName"],
+        "header": "Reference",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "updatedDate",
+        "header": "ProgramDate",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DATE", "format": "dd/MM/yy" }
+      },
+      {
+        "field": "invitation.name",
+        "header": "InvitationType",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      }
+    ],
+    "lazyLoad": true,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "50", "value": 500 }
+    ]
+  },
+
+  "registerBookDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "entryType",
+        "header": "EntryType",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamicTemplate",
+          "index": "0"
+        }
+      },
+      {
+        "field": "tokenNumber",
+        "header": "TokenNumber",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": ["documentFor.firstName", "documentFor.lastName"],
+        "header": "DocumentFor",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": ["receiveBy.firstName", "receiveBy.lastName"],
+        "header": "ReceiveBy",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "file_number",
+        "header": "FileNumber",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "letterType.name",
+        "header": "LetterType",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "department.name",
+        "header": "Department",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      }
+    ],
+    "lazyLoad": true,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "50", "value": 500 }
+    ]
+  },
+
+  "callLogDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "date",
+        "header": "Date",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DATE", "format": "dd/MM/yy" }
+      },
+      {
+        "field": ["callFrom.firstName", "callFrom.lastName"],
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": ["callFrom.phone"],
+        "header": "MobileNumber",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "priority",
+        "header": "Priority",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      }
+    ],
+    "lazyLoad": true,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "50", "value": 500 }
+    ]
+  },
+
+  "visitorDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": ["firstName", "lastName"],
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "phone",
+        "header": "MobileNumber",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "uniqueId",
+        "header": "UniqueId",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "address",
+        "header": "Address",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      }
+    ],
+    "lazyLoad": true,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "50", "value": 500 }
+    ]
+  },
+
+  "complainDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "tokenNumber",
+        "header": "TokenNumber",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": ["complainer.firstName", "complainer.lastName"],
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "complainer.phone",
+        "header": "MobileNumber",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "category.name",
+        "header": "ComplainCategory",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Status",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamicTemplate",
+          "index": "0"
+        }
+      },
+      {
+        "field": "updatedDate",
+        "header": "Date",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DATE", "format": "dd/MM/yy" }
+      }
+    ],
+    "lazyLoad": true,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "50", "value": 500 }
+    ]
+  },
+
+  "connectorDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": ["firstName", "lastName"],
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "phone",
+        "header": "MobileNumber",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "role.name",
+        "header": "Role",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "updatedDate",
+        "header": "Date",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DATE", "format": "dd/MM/yy" }
+      }
+    ],
+    "lazyLoad": true,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "50", "value": 500 }
+    ]
+  },
+
+  "karyakartaDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": ["firstName", "lastName"],
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "phone",
+        "header": "MobileNumber",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "office.name",
+        "header": "OfficeName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "createdDate",
+        "header": "AddedOn",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DATE", "format": "dd/MM/yy" }
+      }
+    ],
+    "lazyLoad": true,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "50", "value": 500 }
+    ]
+  },
+
+  "AdhikariDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": ["firstName", "lastName"],
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "phone",
+        "header": "MobileNumber",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "department.name",
+        "header": "DepartmentName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "designation",
+        "header": "Designation",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      }
+    ],
+    "lazyLoad": true,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "50", "value": 500 }
+    ]
+  },
+
+  "visitorEntryDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": ["visitor.firstName", "visitor.lastName"],
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "visitor.phone",
+        "header": "MobileNumber",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "PurposeCategory",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamicTemplate",
+          "index": "0"
+        }
+      },
+      {
+        "field": "createdDate",
+        "header": "VisitDate",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DATE", "format": "dd/MM/yy" }
+      }
+    ],
+    "lazyLoad": true,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "50", "value": 500 }
+    ]
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "mlaFundList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "",
+        "header": "FundProviderName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate1",
+          "index": "2"
+        }
+      },
+      {
+        "field": "",
+        "header": "FundName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate2",
+          "index": "3"
+        }
+      },
+      {
+        "field": "",
+        "header": "Amount",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "CUSTOM", "id": "amount", "index": "0" }
+      },
+
+      {
+        "field": "",
+        "header": "TotalExpense",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "CUSTOM", "id": "expense", "index": "2" }
+      },
+      {
+        "field": "",
+        "header": "RemainingBalance",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "CUSTOM", "id": "remaining", "index": "1" }
+      },
+      {
+        "field": "date",
+        "header": "Date",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "DATE",
+          "format": "dd/MM/yy"
+        }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": true,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "mlaFundExpenseList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "",
+        "header": "FundName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate2",
+          "index": "2"
+        }
+      },
+      {
+        "field": "",
+        "header": "Amount",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "expenseAmount",
+          "index": "0"
+        }
+      },
+      {
+        "field": "date",
+        "header": "Date",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "DATE",
+          "format": "dd/MM/yy"
+        }
+      },
+
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate1",
+          "index": "0"
+        }
+      }
+    ],
+    "lazyLoad": true,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "tableConfig": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "",
+        "header": "FirstName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate1",
+          "index": "0"
+        }
+      },
+      {
+        "field": "middleName",
+        "header": "MiddleName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "lastName",
+        "header": "LastName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+
+      {
+        "field": "voterID",
+        "header": "VoterIDEPICNo",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "IdentityCardNo",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate2",
+          "index": "1"
+        }
+      },
+      {
+        "field": "address",
+        "header": "LocalAddress",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate5",
+          "index": "4"
+        }
+      },
+      {
+        "field": "",
+        "header": "AssemblyAddress",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate3",
+          "index": "2"
+        }
+      }
+    ],
+    "lazyLoad": true,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 5,
+    "rowExpand": false,
+    "rowSelection": true,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "5", "value": 5 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  }
+}

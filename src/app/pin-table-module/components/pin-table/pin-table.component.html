@@ -1,0 +1,236 @@
+<p-table
+  *ngIf="_config"
+  #dt
+  dataKey="id"
+  [columns]="_config.columns"
+  [value]="_data"
+  [rows]="_config.recordsPerPage"
+  [pageLinks]="_config.pageLinks"
+  [totalRecords]="_totalRecords"
+  [globalFilterFields]="allFields"
+  [lazy]="_config.lazyLoad"
+  [autoLayout]="true"
+  [rowsPerPageOptions]="pageSizeOptions"
+  [paginator]="_config.pagination"
+  (onPage)="onPageChange($event)"
+  (onLazyLoad)="lazyLoadEvent($event)"
+  [resizableColumns]="true"
+  [reorderableColumns]="true"
+  [(selection)]="selectedData"
+  selectionMode="_config.selectionMode"
+  [responsive]="_config.responsive"
+  (onRowSelect)="onRowSelect($event)"
+  (onRowUnselect)="onRowUnselect($event)"
+>
+  <ng-template *ngIf="_config.globalSearch" pTemplate="caption">
+    <div class="p-grid p-justify-between">
+      <div class="p-sm-12 p-md-6">
+        <!-- <h3>{{ _config.tableHeader }}</h3> -->
+      </div>
+      <div class="p-sm-12 p-md-6">
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon"
+            ><i class="pi pi-search" style="margin: 4px 4px 0 0;"></i
+          ></span>
+          <input
+            type="text"
+            pInputText
+            size="50"
+            placeholder="{{ 'CommonFields.Search' | translate }}"
+            (input)="dt.filterGlobal($event.target.value, 'contains')"
+            style="width: auto;"
+          />
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th
+        *ngIf="_config.rowSelection && _config.selectionMode == 'multiple'"
+        style="width: 2em;"
+      >
+        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+      </th>
+      <th
+        *ngIf="_config.rowSelection && _config.selectionMode == 'single'"
+        style="width: 2em;"
+      ></th>
+      <th *ngIf="_config.rowExpand" style="width: 2em;">
+        &nbsp;
+      </th>
+      <!-- <th *ngFor="let col of columns"
+                [pSortableColumn]="isSortableFieldsEmpty() ? col.field : getSortableFields(col.field)" pResizableColumn
+                pReorderableColumn>
+                {{col.header}}
+                <p-sortIcon *ngIf="isSortableFieldsEmpty() ? col.field : getSortableFields(col.field)"
+                    [field]="col.field"></p-sortIcon>
+            </th> -->
+      <th *ngFor="let col of columns">
+        {{ getTranslatedHeader(col.header) | translate }}
+      </th>
+    </tr>
+  </ng-template>
+
+  <ng-template
+    pTemplate="body"
+    let-rowData
+    let-columns="columns"
+    let-rowIndex="rowIndex"
+    let-expanded="expanded"
+  >
+    <tr [pSelectableRow]="rowData" [pSelectableRowIndex]="rowIndex">
+      <td *ngIf="_config.rowSelection && _config.selectionMode == 'multiple'">
+        <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+      </td>
+      <td
+        class="voterReset"
+        *ngIf="_config.rowSelection && _config.selectionMode == 'single'"
+      >
+        <p-tableRadioButton
+          [value]="rowData"
+          [ngClass]="{ radioButtonDefault: unsetButton }"
+        ></p-tableRadioButton>
+      </td>
+      <td *ngIf="_config.rowExpand">
+        <a href="#" [pRowToggler]="rowData">
+          <i
+            [ngClass]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"
+          ></i>
+        </a>
+      </td>
+
+      <td *ngFor="let col of columns; let j = index; let first = first">
+        <!-- <a *ngIf="first && _config.rowExpand" href="#" [pRowToggler]="rowData">
+                <i [ngClass]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></i>
+            </a>           -->
+        <span class="ui-column-title">{{ col.header }}</span>
+        <ng-container [ngSwitch]="col.templateConfig.name">
+          <ng-container *ngSwitchCase="'DEFAULT'">
+            <ng-container
+              *ngTemplateOutlet="
+                defaultColumnTemplate;
+                context: {
+                  $implicit: rowData[col.field],
+                  col: col,
+                  columns: columns,
+                  rowData: rowData,
+                  rowIndex: rowIndex
+                }
+              "
+            >
+            </ng-container>
+          </ng-container>
+          <ng-container *ngSwitchCase="'DATE'">
+            <ng-container
+              *ngTemplateOutlet="
+                dateColumnTemplate;
+                context: {
+                  $implicit: rowData[col.field],
+                  col: col,
+                  columns: columns,
+                  rowData: rowData,
+                  rowIndex: rowIndex
+                }
+              "
+            >
+            </ng-container>
+          </ng-container>
+          <ng-container *ngSwitchCase="'CUSTOM'">
+            <ng-container
+              *ngIf="
+                customColumnTemplatesArray != undefined &&
+                customColumnTemplatesArray[col.templateConfig.id]
+              "
+            >
+              <ng-container
+                *ngTemplateOutlet="
+                  customColumnTemplatesArray[col.templateConfig.id];
+                  context: {
+                    $implicit: rowData[col.field],
+                    col: col,
+                    columns: columns,
+                    rowData: rowData,
+                    rowIndex: rowIndex
+                  }
+                "
+              >
+              </ng-container>
+            </ng-container>
+            <ng-container
+              *ngIf="
+                customColumnTemplatesArray != undefined &&
+                !customColumnTemplatesArray[col.templateConfig.id]
+              "
+            >
+              <ng-container
+                *ngTemplateOutlet="
+                  customColumnTemplatesArray[col.templateConfig.index];
+                  context: {
+                    $implicit: rowData[col.field],
+                    col: col,
+                    columns: columns,
+                    rowData: rowData,
+                    rowIndex: rowIndex
+                  }
+                "
+              >
+              </ng-container>
+            </ng-container>
+          </ng-container>
+        </ng-container>
+      </td>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="emptymessage" let-columns>
+    <tr>
+      <td colspan="12" style="text-align: left;">No Data Found.</td>
+    </tr>
+  </ng-template>
+
+  <ng-template
+    pTemplate="rowexpansion"
+    let-rowData
+    let-columns="columns"
+    let-rowIndex="rowIndex"
+  >
+    <tr class="expand-tr tableouterlistview">
+      <td [attr.colspan]="columns.length + 2">
+        <ng-container
+          *ngTemplateOutlet="
+            rowExpandTemplate;
+            context: {
+              $implicit: rowData,
+              columns: columns,
+              rowIndex: rowIndex
+            }
+          "
+        >
+        </ng-container>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<ng-template
+  #defaultColumnTemplate
+  let-value
+  let-col="col"
+  let-columns="columns"
+  let-rowData="rowData"
+  let-rowIndex="rowIndex"
+>
+  {{ rowData | pinValueExtractor: col | pinTableNoValue }}
+</ng-template>
+
+<ng-template
+  #dateColumnTemplate
+  let-value
+  let-col="col"
+  let-columns="columns"
+  let-rowData="rowData"
+  let-rowIndex="rowIndex"
+>
+  {{ value | date: col.templateConfig.format | pinTableNoValue }}
+</ng-template>

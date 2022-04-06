@@ -1,0 +1,130 @@
+{
+  "registerBookDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "",
+        "header": "TokenNumber",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamicTemplate0",
+          "index": "0"
+        }
+      },
+      {
+        "field": "",
+        "header": "FileNumber",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamicTemplate1",
+          "index": "1"
+        }
+      },
+      {
+        "field": "letterType.name",
+        "header": "LetterType",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "DEFAULT"
+        }
+      },
+      {
+        "field": "department.name",
+        "header": "Department",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "DEFAULT"
+        }
+      },
+      {
+        "field": "createdDate",
+        "header": "AddedOn",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "DATE",
+          "format": "dd/MM/yy"
+        }
+      },
+      {
+        "field": "",
+        "header": "EntryType",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamicTemplate3",
+          "index": "3"
+        }
+      },
+      {
+        "field": "letterReleaseDate",
+        "header": "LtrReleaseDate",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "DATE",
+          "format": "dd/MM/yy"
+        }
+      },
+      {
+        "field": "",
+        "header": "Status",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamicTemplate4",
+          "index": "4"
+        }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "5"
+        }
+      }
+    ],
+    "lazyLoad": true,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": true,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      {
+        "label": "10",
+        "value": 10
+      },
+      {
+        "label": "25",
+        "value": 25
+      },
+      {
+        "label": "50",
+        "value": 50
+      },
+      {
+        "label": "100",
+        "value": 100
+      },
+      {
+        "label": "500",
+        "value": 500
+      }
+    ]
+  }
+}

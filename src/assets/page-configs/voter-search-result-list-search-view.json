@@ -1,0 +1,126 @@
+{
+  "tableConfig": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "",
+        "header": "FullName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate0",
+          "index": "0"
+        }
+      },
+      {
+        "field": "",
+        "header": "LocalFullName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate1",
+          "index": "1"
+        }
+      },
+      {
+        "field": "",
+        "header": "VoterIDEPICNo",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate2",
+          "index": "2"
+        }
+      },
+      {
+        "field": "",
+        "header": "Area",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate4",
+          "index": "4"
+        }
+      },
+      {
+        "field": "",
+        "header": "Occupation",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate5",
+          "index": "5"
+        }
+      },
+      {
+        "field": "",
+        "header": "age",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate6",
+          "index": "6"
+        }
+      },
+      {
+        "field": "address",
+        "header": "LocalAddress",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate7",
+          "index": "7"
+        }
+      },
+
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "9"
+        }
+      }
+    ],
+    "lazyLoad": true,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      {
+        "label": "10",
+        "value": 10
+      },
+      {
+        "label": "25",
+        "value": 25
+      },
+      {
+        "label": "50",
+        "value": 50
+      },
+      {
+        "label": "100",
+        "value": 100
+      },
+      {
+        "label": "500",
+        "value": 500
+      }
+    ]
+  }
+}

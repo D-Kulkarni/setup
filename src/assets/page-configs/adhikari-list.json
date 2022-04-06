@@ -1,0 +1,94 @@
+{
+  "adhikariDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "",
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate1",
+          "index": "0"
+        }
+      },
+      {
+        "field": "",
+        "header": "MobileNumber",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate2",
+          "index": "2"
+        }
+      },
+
+      {
+        "field": "",
+        "header": "Email",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate4",
+          "index": "4"
+        }
+      },
+      {
+        "field": "department.name",
+        "header": "Department",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "designation",
+        "header": "Designation",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+
+      {
+        "field": "",
+        "header": "Address",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "dynamiTemplate3",
+          "index": "3"
+        }
+      },
+
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": true,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": true,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  }
+}

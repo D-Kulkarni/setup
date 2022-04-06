@@ -1,0 +1,120 @@
+{
+  "vikasKameDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "",
+        "header": "DevlpmentWorkTitle",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate6",
+          "index": "6"
+        }
+      },
+      {
+        "field": "",
+        "header": "ProposedAmount",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate2",
+          "index": "2"
+        }
+      },
+      {
+        "field": "",
+        "header": "SanctionedAmount",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate3",
+          "index": "3"
+        }
+      },
+      {
+        "field": "",
+        "header": "RemainingAmount",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate1",
+          "index": "1"
+        }
+      },
+      {
+        "field": "",
+        "header": "TotalExpenses",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate5",
+          "index": "5"
+        }
+      },
+      {
+        "field": "WorkStartDate",
+        "header": "WorkStartDate",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "DATE",
+          "format": "dd/MM/yy"
+        }
+      },
+      {
+        "field": "TentiveFinishDate",
+        "header": "TentiveFinishDate",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "DATE",
+          "format": "dd/MM/yy"
+        }
+      },
+      {
+        "field": "",
+        "header": "Status",
+        "sort": false,
+        "filter": false,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate4",
+          "index": "4"
+        }
+      },
+
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "0"
+        }
+      }
+    ],
+    "lazyLoad": true,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": true,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  }
+}

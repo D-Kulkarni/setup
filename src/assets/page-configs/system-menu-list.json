@@ -1,0 +1,1117 @@
+{
+  "invitationDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "routeDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "letterTypeDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "subLetterTypeDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "connectorTypeDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "prabhagDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "WardName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "assembly.name",
+        "header": "AssemblyName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "prabhagAreaDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "WardAreaName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "prabhag.name",
+        "header": "WardName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "gatDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "ZillaParishadName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "assembly.name",
+        "header": "AssemblyName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "ganDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "TalukaPanchayatName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "gatNumber.name",
+        "header": "ZillaParishadName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "gatNumber.assembly.name",
+        "header": "AssemblyName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "gaonDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "GaonName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "ganNumber.name",
+        "header": "TalukaPanchayatName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "ganNumber.gatNumber.name",
+        "header": "ZillaParishadName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "ganNumber.gatNumber.assembly.name",
+        "header": "AssemblyName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "complainCategoryDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "prefix",
+        "header": "Prefix",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "complainTypeDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "ComplaintType",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "category.name",
+        "header": "ComplaintCategory",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "departmentDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "managePrintTemplateDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "printConfigurationDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "format",
+        "header": "LetterType",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "orientation",
+        "header": "Orientation",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "unit",
+        "header": "Unit",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "vikasKameDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "nameTitleDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "castDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "assemblyDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "AssemblyName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "district.name",
+        "header": "DistrictName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "district.state.name",
+        "header": "StateName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "stateDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "Name",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+
+  "districtDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "DistrictName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "state.name",
+        "header": "StateName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  },
+  "partiesDataList": {
+    "tableHeader": "",
+    "columns": [
+      {
+        "field": "id",
+        "header": "Id",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "name",
+        "header": "PartyName",
+        "sort": false,
+        "filter": false,
+        "templateConfig": { "name": "DEFAULT" }
+      },
+      {
+        "field": "",
+        "header": "Actions",
+        "sort": false,
+        "filter": true,
+        "templateConfig": {
+          "name": "CUSTOM",
+          "id": "rowActionTemplate",
+          "index": "1"
+        }
+      }
+    ],
+    "lazyLoad": false,
+    "pagination": true,
+    "globalSearch": false,
+    "recordsPerPage": 10,
+    "rowExpand": false,
+    "rowSelection": false,
+    "selectionMode": "single",
+    "responsive": true,
+    "pagesSizes": [
+      { "label": "10", "value": 10 },
+      { "label": "25", "value": 25 },
+      { "label": "50", "value": 50 },
+      { "label": "100", "value": 100 },
+      { "label": "500", "value": 500 }
+    ]
+  }
+}
