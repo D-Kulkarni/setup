@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormGroup, FormBuilder, FormArray } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LocationService } from '../../core/location.service';
 import { NotificationService } from '../../core/notification-service.service';
@@ -11,93 +11,64 @@ import { NotificationService } from '../../core/notification-service.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  public invalidLogin: boolean = false;
-  allCountriesList!:any[] ;
-  statesByCountryList!:any[] ;
-  countryCode!:string;
-  stateCode!:string;
-  cityList!:any[];
-  constructor(private http:HttpClient,private router:Router,private notification: NotificationService,private  locationService:LocationService) { }
+  empForm!: FormGroup;
 
-  ngOnInit(): void {
-    this.allCountriesList = this.locationService.getAllCountries();
-   let data =  this.allCountriesList
-      data.forEach((item:any,index)=>{
-        // if(item.name == 'India'){
-        //   console.log('index',index);
-        //   data.splice(100,1)
-        //   data.splice(0,0,item);
-          
-         
-        // }
-        if(item.name == 'United States'){
-          console.log('index',index);
-          data.splice(229,1)
-          data.splice(0,0,item);
-          
-         
-        }
-        if(item.name == 'India'){
-          console.log('index',index);
-          data.splice(100,1)
-          data.splice(0,0,item);
-          
-         
-        }
-      })
-  this.allCountriesList = data;
-  console.log(this.allCountriesList);
-  
-    
-  }
-  selectedCountry(data:any) {
-  console.log('countrycode',data);
-  
-    this.countryCode = data.target.value;
-    this.getStateByCountry();
+  constructor(private fb: FormBuilder) {}
 
-  }
-
-  selectedState(data:any) {
-    console.log('data',data);
-    
-    this.stateCode = data.target.value;
-    this.getCityByCountryAndState()
-
-  }
-
-  getStateByCountry() {
-    this.statesByCountryList = this.locationService.getStateByCountry(this.countryCode);
-    
-  }
-  getCityByCountryAndState() {
-    this.cityList = this.locationService.getCitiesByState(this.countryCode, this.stateCode);
-    
-  }
-
-
-  login(form: NgForm) {
-    const credentials = JSON.stringify(form.value);
-
-    this.http.post("authenticate/login",
-      credentials
-    ).subscribe({
-      next: (response) => {
-        this.notification.showSuccess("User login successful", "Success")
-        const token = (<any>response).token;
-        const refreshToken = (<any>response).refreshToken;
-        localStorage.setItem("accessToken", token);
-        localStorage.setItem("refreshToken", refreshToken);
-        this.invalidLogin = false;
-        this.router.navigate(["/"]);
-      },
-      error: (err) => {
-        this.notification.showError("Invalid username or password.", "Error")
-        console.error(err)
-        this.invalidLogin = true;
-      },
-      complete: () => console.info('Login complete')
+  ngOnInit() {
+    this.empForm = this.fb.group({
+      employees: this.fb.array([
+          this.newEmployee()
+      ])
     });
+  }
+
+  employees(): FormArray {
+    return this.empForm.get('employees') as FormArray;
+  }
+
+  newEmployee(): FormGroup {
+    return this.fb.group({
+      firstName: '',
+      lastName: '',
+      skills: this.fb.array([
+          this.newSkill()
+      ])
+    });
+  }
+
+  addEmployee() {
+    this.employees().push(this.newEmployee());
+  }
+
+  removeEmployee(empIndex: number) {
+    this.employees().removeAt(empIndex);
+  }
+
+  employeeSkills(empIndex: number) {
+    // return this.empForm.get('skills') as FormArray
+    return this.employees()
+      .at(empIndex)
+      .get('skills') as FormArray;
+  }
+
+  newSkill(): FormGroup {
+    return this.fb.group({
+      skill: '',
+      exp: ''
+    });
+  }
+
+  addEmployeeSkill(empIndex: number) {
+    this.employeeSkills(empIndex).push(this.newSkill());
+  }
+
+  removeEmployeeSkill(empIndex: number, skillIndex: number) {
+    this.employeeSkills(empIndex).removeAt(skillIndex);
+  }
+
+  onSubmit() {
+    console.log(this.empForm.value);
   }
 
 }
